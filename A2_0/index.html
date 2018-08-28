@@ -274,7 +274,7 @@ function initialize () {
     
     //some basic options
     var newoptions = {  nodeLabel:"label", 
-                    nodeResize:"count", height:1000,
+                    nodeResize:"count", height:6000,
                     nodeFocus:true, radius:3, charge:-500};
     // defaults
     control.options = $.extend({
@@ -485,16 +485,6 @@ function getPromiseData(url,proxyUrl){
   return deferred.promise();
 }
 	  
-// Fetch variables
-var scrollTop = $(document).scrollTop();
-var windowHeight = $(window).height();
-var bodyHeight = $(document).height() - windowHeight;
-var scrollPercentage = (scrollTop / bodyHeight);
-
-// if the scroll is more than 90% from the top, load more content.
-if(scrollPercentage > 0.9) {
-	// Load content
-}
 	 
 </script></head><body><div>d3.js force directed node focus:<strong>Site Concept Browser</strong><span style="color:darslateblue;"> <small>click a node to focus, double click to visit page</small></span><aside><small>
    <a href='http://ramblings.mcpher.com'>ramblings.mcpher.com</a> ackowledgements:<a href='http://bost.ocks.org/mike/'>Mike Bostok(d3.js)</a></small>
