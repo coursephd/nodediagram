@@ -274,7 +274,7 @@ function initialize () {
     
     //some basic options
     var newoptions = {  nodeLabel:"label", 
-                    nodeResize:"count", height:4500,
+                    nodeResize:"count", height:200,
                     nodeFocus:true, radius:3, charge:-500};
     // defaults
     control.options = $.extend({
@@ -484,6 +484,12 @@ function getPromiseData(url,proxyUrl){
   
   return deferred.promise();
 }
+	  
+$(window).on('scroll', function(){
+    if( $(window).scrollTop() > $(document).height() - $(window).height() ) {
+        $("#load-more").click();
+    }
+}).scroll();	  
 
 </script></head><body><div>d3.js force directed node focus:<strong>Site Concept Browser</strong><span style="color:darslateblue;"> <small>click a node to focus, double click to visit page</small></span><aside><small>
    <a href='http://ramblings.mcpher.com'>ramblings.mcpher.com</a> ackowledgements:<a href='http://bost.ocks.org/mike/'>Mike Bostok(d3.js)</a></small>
